@@ -1,0 +1,6 @@
+framework module SLGameSDK {
+  umbrella header "SLGameSDK.h"
+
+  export *
+  module * { export * }
+}
