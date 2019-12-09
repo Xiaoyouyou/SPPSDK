@@ -16,18 +16,18 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SPSDKFramework"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of SPSDKFramework."
+  spec.version      = "1.0.3"
+  spec.summary      = "iOS SPSDKFramework for SP"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  #spec.description  = <<-DESC
+   #                DESC
 
-  spec.homepage     = "http://EXAMPLE/SPSDKFramework"
+  spec.homepage     = "https://github.com/Xiaoyouyou/SPPSDK"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/SPSDKFramework.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Xiaoyouyou/SPPSDK.git", :tag => "spec.version" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +90,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "SLGameSDK.framework/Headers/*.{h}"
+ # spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "SLGameSDK.framework/Headers/*.{h}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +105,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  spec.resources = "/SPGame/SDKProject/SPGameSDK/SLGameBundle"
+  spec.resources = "SLGameBundle.bundle"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -116,7 +116,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
+  # spec.framework  = "SLGameSDK.framework/Headers/*.{h}"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
